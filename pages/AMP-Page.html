@@ -1,0 +1,549 @@
+<!doctype html>
+<html ⚡>
+   <head>
+      <meta charset="utf-8">
+      <title>Hubco</title>
+      <link rel="canonical" href="https://medium.com/p/cb7f223fad86" >
+      <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+      <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+      <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,700&amp;subset=all" rel="stylesheet" type="text/css" />
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+      <style amp-custom>
+         body {
+         margin: 0;
+         font-family: 'Raleway', Sans-Serif;
+         }
+         .brand-logo {
+         font-family: 'Raleway', Sans-Serif;
+         }
+         .ad-container {
+         display: flex;
+         justify-content: center;
+         }
+         .content-container p {
+         line-height: 24px;
+         } 
+         .article-body {
+         padding: 15px;
+         }
+         header{
+          padding: 0;
+         }
+         body > header {
+         position: fixed;
+         top: 0;
+         left: 0;
+         right: 0;
+         height: 46px;
+         background: #ffffff;
+         z-index: 10;
+         padding: 8px 15px;
+         border-bottom: 1px solid #ff9c00;
+         box-shadow: 0 0 5px #333;
+         zoom:0.8;
+         /*transform: translateX(20px);*/
+         }
+         .logo {
+         background: yellow;
+         border: 5px solid black;
+         border-radius: 50%;
+         opacity: 0.7;
+         position: fixed;
+         z-index: 1000;
+         top: 100px;
+         right: 10px;
+         width: 40px;
+         height: 40px;
+         }
+         body {
+         padding-top: 62px;
+         }
+         /* In the shadow-doc mode, the parent shell already has header and nav. */
+         .amp-shadow header {
+         display: none;
+         }
+         .lightbox {
+         background: #222;
+         }
+         .full-bleed {
+         margin: 0 -15px;
+         }
+         .lightbox-content {
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         display: flex;
+         flex-direction: column;
+         flex-wrap: nowrap;
+         justify-content: center;
+         align-items: center;
+         }
+         .lightbox-content p {
+         color: #fff;
+         padding: 15px;
+         }
+         .lightbox amp-img {
+         width: 100%;
+         }
+         figure {
+         margin: 0;
+         }
+         figcaption {
+         color: #6f757a;
+         padding: 15px 0;
+         font-size: .9em;
+         }
+         .author {
+         display: flex;
+         align-items: center;
+         background: #f4f4f4;
+         padding: 0 15px;
+         font-size: .8em;
+         /*border: solid #dcdcdc;
+         border-width: 1px 0;*/
+         }
+         .header-time {
+         color: #a8a3ae;
+         font-family: 'Raleway', Sans-Serif;
+         font-size: 12px;
+         }
+         .author p {
+         margin: 5px;
+         }
+         .byline {
+         font-family: 'Raleway', Sans-Serif;
+         display: inline-block;
+         width: 100%;
+         }
+         .byline p {
+         line-height: normal;
+         }
+         .byline .brand {
+         color: #6f757a;
+         }
+         .standfirst {
+         color: #6f757a;
+         }
+         .mailto {
+         text-decoration: none;
+         }
+         #author-avatar {
+         margin: 10px;
+         border: 5px solid #fff;
+         width: 50px;
+         height: 50px;
+         border-radius: 50%;
+         }
+         h1 {
+         margin: 5px 0;
+         font-weight: normal;
+         }
+         footer {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 60px;
+         background: #ff9c00;
+         }
+         hr {
+         margin: 0;
+         }
+         amp-app-banner {
+         background: #f4f4f4;
+         padding: 10px;
+         box-shadow: 0 2px 5px 0 #000;
+         }
+         amp-app-banner .content {
+         display: flex;
+         }
+         amp-img {
+         background-color: #f4f4f4;
+         }
+         .slot-fallback {
+         padding: 16px;
+         background: #ffffff;
+         }
+         amp-app-banner amp-img {
+         margin-right: 15px
+         }
+         amp-app-banner h3 {
+         margin: 0;
+         }
+         amp-app-banner p {
+         font-size: 14px;
+         margin: 3px 0;
+         }
+         amp-app-banner a {
+         padding: 8px;
+         margin-right: 10px;
+         }
+         amp-app-banner .actions {
+         text-align: right;
+         font-size: 14px;
+         }
+         amp-sidebar {
+         width: 320px;
+         }
+         nav li {
+         list-style: none;
+         margin-bottom: 10px;
+         }
+         nav li a {
+         text-decoration: none;
+         color: #666666;
+         }
+         .menu{    margin-top: 7px;
+         background: rgba(0, 0, 0, 0);
+         border: none;
+         font-size: 28px;
+         color: #fc9900;}
+         header amp-img{background: transparent;text-align: center;}
+         .pull-right{float: right;}
+         .full-width{width: 100%;}
+         #sidebar{background: #fc9900;}
+         .ft-600{font-weight: 600;}
+         .listing {
+         padding: 0;
+         }
+         .listing li {
+         list-style: none;
+         line-height: 20px;
+         padding: 5px 0;
+         }
+         .text-black {
+         color: #333 !important;
+         }
+         .listing-space {
+         padding-left: 0;
+         }
+         .listing-space li a {
+         color: #000;
+         text-decoration: none;
+         display: block;
+         padding: 15px;
+         }
+         .listing-space li a .fa{margin-right: 5px;}
+         .listing.-amp-accordion-content{
+          max-height: 300px;
+          overflow-y: auto !important;
+         }
+         .-amp-accordion-header {
+    cursor: pointer;
+    background-color: #efefef;
+    padding: 10px;
+    border: 1px solid #dfdfdf;
+    font-size: 16px;
+    font-weight: normal;
+}
+.-amp-accordion-content{
+  padding: 15px;
+}
+.-amp-accordion-content li{
+  list-style: none;
+
+}
+         .form{
+          background: #ff9c00;
+          padding: 20px;
+          text-align: center;
+         }
+         .form fieldset{
+          border:none;
+          padding: 0;
+         }
+         .form-control {
+    
+    /*width: 45%; */
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    /*border-radius: 4px;*/
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+    /*border-radius: 4px;*/
+}
+.btn {
+    color: #fff;
+    background-color: #e50000;
+    border-color: #e50000;
+}
+.margin-top-10{margin-top: 10px;}
+.container-fluid{
+    width: 1170px; 
+    margin: 0 auto;
+}
+.margin-bottom-10{
+    margin-bottom: 10px;
+}
+.d-block{
+    display: block;
+    width: 320px;
+    margin:10px auto;
+}
+.d-block input,.d-block textarea{width: 100%;}
+
+@media (min-width: 320px) and (max-width: 419px)
+{
+    .margin-40-xs{
+        margin: 40px 0;
+    }
+    .pull-left-xs{
+        float: left;
+    }
+   .container-fluid{
+    width: 320px !important; 
+    margin: 0 auto;
+    } 
+    .d-block input, .d-block textarea {
+        width: 200px;
+    }
+    .d-block{ 
+    width: 250px; 
+}
+}
+@media (min-width: 420px) and (max-width: 479px)
+{
+    .margin-40-xs{
+        margin: 40px 0;
+    }
+    .pull-left-xs{
+        float: left;
+    }
+   .container-fluid{
+    width: 400px !important; 
+    margin: 0 auto;
+    } 
+    .d-block input, .d-block textarea {
+        width: 300px;
+    }
+}
+@media (min-width: 480px) and (max-width: 767px)
+{
+    .margin-40-xs{
+        margin: 40px 0;
+    }
+     .pull-left-xs{
+        float: left;
+    }
+    .container-fluid{
+        width: 440px !important; 
+        margin: 0 auto;
+    } 
+    .d-block input, .d-block textarea {
+        width: 290px;
+    }
+}
+@media (min-width: 768px) and (max-width: 968px)
+{
+   .container-fluid{
+    width: 740px; 
+    margin: 0 auto;
+    } 
+}
+.i-amphtml-layout-size-defined {
+    overflow: inherit !important;
+}
+.text-center{
+    text-align: center;
+}
+
+      </style>
+
+      <script async src="https://cdn.ampproject.org/v0.js"></script>
+      <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+      <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+      <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+      <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+      </style>
+      <noscript>
+         <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+      </noscript>
+   </head>
+   <body>
+      <!-- 
+         <div class="logo"></div> -->
+      <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+     <!--  <amp-img class='close' src="/img/ic_chevron_left_black_24dp_2x.png" width="32" height="32" alt="Close" on="tap:drawermenu.close" role="button" tabindex="0"><i class="fa fa-close"></i></amp-img> -->
+      <ul class="listing-space">
+                        <li><a href="#"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Private Limited Company </a> </li>
+                        <li><a href="#"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>One Person Company</a></li>
+                        <li><a href="#"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Limited Liability Partnership(LLP)</a></li>
+                        <li><a href="#"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Nidhi Company</a></li>
+                        <li><a href="#"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Public Company </a></li>
+                        <li><a href="#"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Section 8 Company(NPO) </a></li>
+                     </ul>
+        
+      </amp-sidebar>
+      <header>
+         <button on="tap:sidebar.toggle" class="menu pull-right" title="Toggle Sidebar" >
+         <i class="fa fa-align-justify"></i>
+         </button>
+         <amp-img  src="../images/logo-default.png" width="109"  height="40" tabindex="0">    </amp-img>
+      </header>
+      <!--
+         Slots spec is not implemented yet by any browser. Will use an older version via `<content>` tag.
+         <slot name="slot1"></slot>
+         -->
+      <content>
+        <div class="container-fluid">
+         <div class="slot-fallback">
+            <article>
+               <figure>
+                  <header>
+                     <h2 itemprop="headline" class="ft-600">How to Register a Private Limited Company in India</h2>
+                  </header>
+
+                    <p class="margin-40-xs"><span>Written by CA Paras Mehra</span><span class="pull-right pull-left-xs">Published on January 30, 2017 <span>(203 Views) <i class="fa fa-eye"></i></span></span></p>
+                  <!-- <div class="author">
+                     <amp-img src="../images/GST-article.jpg" id="author-avatar" placeholder="" height="45" width="50" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 50px; height: 50px;">
+                        <img amp-img-id="author-avatar" class="i-amphtml-fill-content -amp-fill-content i-amphtml-replaced-content -amp-replaced-content" src="../images/GST-article.jpg">
+                     </amp-img>
+                     <div class="byline">
+                        <p>
+                           Written by <span itemscope="" itemtype="../images/GST-article.jpg" itemprop="author"><b>CA Paras Mehra</b>
+                           <a class="mailto" href="mailto:paras@hubco.com">
+                           paras@hubco.com</a></span>
+                        </p>
+                        <p class="brand">Published on January 30, 2017 <span>(203 Views) <i class="fa fa-eye"></i></span></p>
+                     </div>
+                  </div> -->
+                  <amp-img  src="../images/GST-article.jpg" width="280" height="200" tabindex="0" layout="responsive"> </amp-img>
+                  <figcaption>Image-Source...</figcaption>
+               </figure>
+               <div class="main-content">
+                  <h2 class="ft-600">1.0 Introduction</h2>
+                  <p>The company latest strike off/company closure rules has been notified and the earlier 
+                     rules has been rescinded. So, if you are planning to file the company closure for your 
+                     company, then you must read this article and decide on its merits. Company winding 
+                     up or strike off is the procedure through which company is closed and directors/
+                     shareholders need not take care of the compliances. 
+                  </p>
+                  <p>Let us understand everything about the company closure.</p>
+                  <h2 class="ft-600">2.0 Is this article for only Private Limited Company?</h2>
+                  <p>No, the process of closing a company is same for any type of company except for 
+                     section 8 company. Section 8 company i.e. non profit organization (NPO) cannot be 
+                     strike off under this procedure.
+                  </p>
+                  <p>Hence, if you want to close a public company, one person company or Nidhi Company 
+                     or private limited company, then also you can proceed to file closure under the process
+                     explained in this article.
+                  </p>
+                  <h2 class="ft-600">3.0 When a Closure of Company can be filed?</h2>
+                  <p>The company closure can be filed only after completing of following conditions:</p>
+                  <p>a) Repay or extinguish all your liabilities: The company closure under section 248 can be
+                     filed only after repaying or extinguishing all your liabilities. Further, as a documentary 
+                     proof, you must take No objection Certificate (NOC) from the creditors before filing the 
+                     closure application. 
+                  </p>
+                  <p>Further, in case you have a bank loan pending, kindly repay it and take the No Objection Certificate (NOC) from the respective bank.</p>
+                  <p>b) A Special Resolution: To authenticate and approve the company closure application, 
+                     you need a special resolution from the directors duly certified by each of the directors of 
+                     the company or the consent of seventy five percent members in terms of paid up share 
+                     capital.
+                  </p>
+                  <h2 class="ft-600">4.0 Introduction</h2>
+                  <p>The company latest strike off/company closure rules has been notified and the earlier 
+                     rules has been rescinded. So, if you are planning to file the company closure for your 
+                     company, then you must read this article and decide on its merits. Company winding 
+                     up or strike off is the procedure through which company is closed and directors/
+                     shareholders need not take care of the compliances. 
+                  </p>
+                  <p>Let us understand everything about the company closure.</p>
+                  <h2 class="ft-600">5.0 Is this article for only Private Limited Company?</h2>
+                  <p>No, the process of closing a company is same for any type of company except for 
+                     section 8 company. Section 8 company i.e. non profit organization (NPO) cannot be 
+                     strike off under this procedure.
+                  </p>
+                  <p>Hence, if you want to close a public company, one person company or Nidhi Company 
+                     or private limited company, then also you can proceed to file closure under the process
+                     explained in this article.
+                  </p>
+                  <h2 class="ft-600">6.0 When a Closure of Company can be filed?</h2>
+                  <p>The company closure can be filed only after completing of following conditions:</p>
+                  <p>a) Repay or extinguish all your liabilities: The company closure under section 248 can be
+                     filed only after repaying or extinguishing all your liabilities. Further, as a documentary 
+                     proof, you must take No objection Certificate (NOC) from the creditors before filing the 
+                     closure application. 
+                  </p>
+                  <p>Further, in case you have a bank loan pending, kindly repay it and take the No Objection Certificate (NOC) from the respective bank.</p>
+                  <p>b) A Special Resolution: To authenticate and approve the company closure application, 
+                     you need a special resolution from the directors duly certified by each of the directors of 
+                     the company or the consent of seventy five percent members in terms of paid up share 
+                     capital.
+                  </p>
+               </div>
+            </article>
+
+
+            <form method="post" class="form" action-xhr="/form/echo-json/post" target="_blank">
+              <p>Is your Query, still unanswered?</p>
+              <fieldset>
+                  <input name="clientId" type="hidden" class="form-control" value="CLIENT_ID(poll)" data-amp-replace="CLIENT_ID">
+                  <input name="canonicalUrl" type="hidden"  class="form-control" value="RANDOM and CANONICAL_URL" data-amp-replace="CANONICAL_URL RANDOM">
+                  <label class="margin-bottom-10 d-block">
+                      <!-- <span>Your name</span> -->
+                      <input type="phone" name="Contact Number"  class="form-control"  id="contact" required="" placeholder="Contact Number">
+                  </label>
+                  <label class="margin-bottom-10 d-block">
+                      <!-- <span>Your email</span> -->
+                      <input type="email" name="email"  class="form-control"  id="email1" required="" placeholder="Email Address">
+                  </label>
+                  <div class="margin-bottom-10 d-block">
+                    <textarea class="form-control" rows="5"></textarea>
+                  </div>
+                  <input type="submit" value="Submit" class="btn red margin-top-10">
+              </fieldset>
+
+              <div submit-success="">
+                  <template type="amp-mustache">
+                      Success! Thanks {{name}} for subscribing! Please make sure to check your email {{email}}
+                  to confirm!
+                  </template>
+              </div>
+              <div submit-error="">
+                  <template type="amp-mustache">
+                      Oops! {{name}}, We apologies something went wrong. Please try again later.
+                  </template>
+              </div>
+          </form>
+          <div class="text-center">
+          <a href="#" class="btn red margin-top-10">Link</a>
+          </div>
+         </div>
+      </content>
+      </div>
+      <footer> 
+         <p>© 2017, Hubco. All Rights Reserved</p>
+      </footer>
+   </body>
+</html>
